@@ -6,7 +6,6 @@
 
 def sum_of_intervals(intervals):
 	range_dict = {}
-	len_counter = 0
 	for array in intervals:
 		for n in range(array[0], array[-1]):
 			if n in range_dict:
