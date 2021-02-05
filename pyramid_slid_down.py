@@ -4,13 +4,12 @@
 
 def longest_slide_down(pyramid):
 	btm_layer = pyramid.pop()  		#removes last layer of Array, saves in counter
-	print (btm_layer)
 	while pyramid:
 		nxt_layer = pyramid.pop()		# next layer up from bottom
-		print(f"Next Layer: {nxt_layer}")
 		btm_layer = [nxt_layer[i] + max(btm_layer[i], btm_layer[i+1]) for i in range(len(nxt_layer))]
-		print(f" bottom Layer: {btm_layer}")
-	print (btm_layer.pop())
+		# takes the larger of 2 ints at lower layer, and adds it to the int above.
+		# this continues, adding the lower layer to the upper layer until the top
+	return btm_layer.pop()
 
 
 
