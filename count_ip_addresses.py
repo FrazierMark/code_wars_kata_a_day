@@ -1,7 +1,8 @@
 def ips_between(start, end):
 	list_start = start.split(".")
 	list_end = end.split(".")
-	start_convert = end_convert = []
+	start_convert = []
+	end_convert = []
 
 	for i in list_start:
 		i = int(i)
